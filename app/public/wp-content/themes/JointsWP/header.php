@@ -30,23 +30,24 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+		</style>
+
 		<?php wp_head(); ?>
 
 	</head>
 			
 	<body <?php body_class(); ?>>
 
-		<div class="off-canvas-wrapper">
-			
-			<!-- Load off-canvas container. Feel free to remove if not using. -->			
-			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
-			
-			<div class="off-canvas-content" data-off-canvas-content>
-				
-				<header class="header" role="banner">
+		<a href="#content" class="skip-link screen-reader-text">
+			<?php esc_html_e( 'Skip to content', 'wptags' ); ?>
+		</a>
+		
+		<header id="masthead" class="site-header" role="banner">
 							
-					 <!-- This navs will be applied to the topbar, above all content 
-						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+			<!-- This navs will be applied to the topbar, above all content 
+				To see additional nav styles, visit the /parts directory -->
+			<?php get_template_part( 'parts/nav', 'main-nav' ); ?>
 	 	
-				</header> <!-- end .header -->
+		</header> <!-- end .header -->
