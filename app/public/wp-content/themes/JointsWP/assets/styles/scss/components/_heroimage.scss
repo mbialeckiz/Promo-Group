@@ -1,0 +1,13 @@
+.heroimage {
+    width: 100%;
+    height: auto;
+    &__backgroundimage {
+        //color: $white;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+        padding: 100px;
+    }
+}
