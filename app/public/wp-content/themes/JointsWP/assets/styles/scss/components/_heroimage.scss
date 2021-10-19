@@ -7,7 +7,58 @@
         background-position: center center;
         background-repeat: no-repeat;
         width: 100%;
-        height: auto;
-        padding: 100px;
+        min-height: 640px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__titlewrapper {
+        max-width: 100%;
+        background-color: rgba(0,0,0,0.6);
+        padding: 40px 40px 40px 0;
+        position: relative;
+        @include breakpoint(large up) {
+            max-width: 50%;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            background-color: rgba(0,0,0,0.6);;
+            width: 40px;
+            height: 100%;
+            left: -40px;
+            top: 0;
+            bottom: 0
+
+        }
+    }
+    &__undertitle {
+        color: $white!important;
+        font-size: 16px;
+        display: block;
+    }
+    &__pagetitle {
+        color: $white;
+        font-size: 34px;
+        z-index: 222;
+        font-weight: 600;
+        margin: 10px 0 20px 0;
+        @include breakpoint(medium up) {
+            font-size: 38px;
+        }
+          
+        @include breakpoint(mediumlarge up) {
+            font-size: 44px;
+        }
+          
+        @include breakpoint(large up) {
+            font-size: 48px;
+        }
+    }
+    &__cta-button {
+        font-weight: bold;
+        color: $black!important;
     }
 }

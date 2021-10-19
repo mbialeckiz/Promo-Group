@@ -12,28 +12,38 @@ $breakpoint = "medium"; ?>
 
 			<div class="site-header__nav-holder">
 				<nav id="site-navigation" class="main-navigation js-main-navigation" role="navigation">
-					<div class="hamburger hamburger--js hide-for-large float-right" aria-label="Åpen meny">
+					<!-- mobile menu -->
+					<button type="button" class="nav__toggle nav__toggle--open js-menu-trigger" aria-label="Menu" data-target=".js-menu" data-action="open">
+         				<span class="burger cross nav__toggle nav__toggle--close js-menu-trigger" aria-label="Menu" data-target=".js-menu" data-action="open">
+							 <span class="middle"></span>
+						</span>
+					</button>
+
+					<div class="main-navigation__mobile--js main-navigation__mobile hide-for-large float-right">
 						<button type="button" data-toggle="mobile-dropdown">
-							<i class="fa fa-bars"></i>
+						<i class="fa fa-bars">
+							<span>Menu</span>
+						</i>
 						</button>
 					</div>
+
+					<div class="dropdown-pane" id="mobile-dropdown" data-responsive-menu="accordion medium-dropdown" data-dropdown>
+
+						<?php mobile_menu(); ?> 
+
+					</div>
+
+					<!-- desktop menu -->
 					<?php
 						$args = [
-						// Location pickable in Customizer
 						'theme_location'  =>  'main-menu',
-						// Assigns a default menu to location
 						'menu'            =>  'Main Menu',
-						// Main wrapper around the ul of posts
 						'container'       =>  'div',
-						'container_class' =>  'main-navigation__wrapper',
+						'container_class' =>  'main-navigation__wrapper show-for-large',
 						'container_id'    =>  'main-navigation',
-						// Wrapper for menu items - defaults to ul
 						'items_wrap'      =>  '<ul id="%1$s" class="%2$s">%3$s</ul>',
 						'menu_class'      =>  'main-navigation__itemswrapper',
-						//'menu_id'         =>  'items-wrap-id',
-						// Depth of child nav items to show
 						'depth'           =>  0,
-						// Callback function if menu is not available
 						'fallback_cb'     =>  'wp_page_menu',
 						];
 						wp_nav_menu( $args );

@@ -50,3 +50,17 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 register_nav_menus([
     'main-menu' => esc_html__( 'Main Menu', 'wptags' ),
 ]);
+
+
+// The Top Menu MOBILE
+function mobile_menu() {
+    wp_nav_menu(array(
+       'container' => false,                           // Remove nav container
+       'menu_class' => 'vertical menu',                // Adding custom nav class
+       'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+       'theme_location' => 'main-menu',                // Where it's located in the theme
+       'depth' => 5,                                   // Limit the depth of the nav
+       'fallback_cb' => false,                         // Fallback function (see below)
+       'walker' => new Topbar_Menu_Walker()
+   ));
+} 

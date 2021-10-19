@@ -117,12 +117,13 @@ $print-hrefs: true;
 $breakpoints: (
   small: 0,
   medium: 640px,
+  mediumlarge: 768px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium large);
+$breakpoint-classes: (small medium mediumlarge large xlarge);
 
 // 3. The Grid
 // -----------
@@ -162,6 +163,14 @@ $header-styles: (
     'h3': ('font-size': 31),
     'h4': ('font-size': 25),
     'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
+  ),
+  large: (
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 38),
+    'h3': ('font-size': 34),
+    'h4': ('font-size': 28),
+    'h5': ('font-size': 22),
     'h6': ('font-size': 16),
   ),
 );
@@ -294,7 +303,7 @@ $button-margin: 0 0 0 0;
 $button-fill: solid;
 $button-background: $primary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: $white;
+$button-color: $main-text-black;
 $button-color-alt: $black;
 $button-radius: $global-radius;
 $button-hollow-border-width: 1px;

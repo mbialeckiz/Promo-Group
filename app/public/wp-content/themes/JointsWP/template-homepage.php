@@ -12,39 +12,32 @@ get_header(); ?>
 
             <?php
             $heroimage = get_field('heroimage');
-            $heroimage_heading_h1 = the_field('heroimage_heading_h1');
-            $heroimage_subheading = the_field('heroimage_subheading');
-            $heroimage_cta_button = the_field('heroimage_cta_button');
+            $heroimage_heading_h1 = get_field('heroimage_heading_h1');
+            $heroimage_subheading = get_field('heroimage_subheading');
+            $heroimage_cta_button_text = get_field('heroimage_cta_button_text');
+            $heroimage_cta_button_url = get_field( 'heroimage_cta_button_url' );
 
-            if ($heroimage): ?>
+            if ( $heroimage ): ?>
 
-            <div class="heroimage__backgroundimage" src="<?php echo esc_url(
-                    $heroimage['url']
-                ); ?>" alt="<?php echo esc_attr($heroimage['alt']); ?>">
-                              
-                <div class="grid-y">
+            <div class="heroimage__backgroundimage" style="background-image: url('<?php echo $heroimage['url']; ?>');" alt="<?php echo esc_attr($heroimage['alt']); ?>">
+                <div class="container">     
+                    <div class="heroimage__titlewrapper">
                     
-                    <div class="cell small-12 large-6">
-                        <span class="heroimage__undertitle ">
+                        <span class="heroimage__undertitle">
                             <?php echo $heroimage_subheading; ?>
                         </span>
-                    </div>
                         
-                    <div class="cell small-12 large-6">
-                        <h1 class="heroimage__pagetitle cell small-12 large-6">
-                            <?php echo $heroimage_heading_h1; ?>
-                        </h1>
+                        <?php if ( $heroimage_heading_h1 ) : ?>
+                            <h1 class="heroimage__pagetitle">
+                                <?php echo $heroimage_heading_h1; ?>
+                            </h1>
+                        <?php endif; ?>
+
+                        <a href="<?php echo $heroimage_cta_button_url; ?>" class="button heroimage__cta-button">
+                            <?php echo $heroimage_cta_button_text; ?>
+                        </a>
                     </div>
-
-                    <div class="cell small-12 large-6">
-                        <button class="heroimage__button small-12 large-6">
-                            <?php echo $heroimage_cta_button; ?>
-                        </button>
-
-                    </div>
-
                 </div>
-
             <?php endif; ?>
             
             </div>

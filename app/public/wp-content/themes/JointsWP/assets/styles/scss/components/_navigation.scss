@@ -1,42 +1,6 @@
 /***** ABOVE THE FOLD ******/
 
 /* Main nav, Site HEader */
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 600px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-.logged-in .site-header {
-  margin-top: 32px;
-}
-
 .site-header {
   color: $white;
   height: 80px;
@@ -106,6 +70,14 @@
       > a  {
         color: $primary-yellow;
       }
+    }
+  }
+  &__mobile {
+    display: none;
+    width: 50px;
+    height: 50px;
+    &--open {
+      display: block;
     }
   }
 }
