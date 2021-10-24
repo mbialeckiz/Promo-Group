@@ -88,6 +88,7 @@ $secondary-text-violet: #7A83A1;
 $body-white: #FFFFFF;
 $body-gradient: linear-gradient(90deg, rgba(234,171,43,0) 0%, rgba(255,202,95,0.07) 100%);
 
+
 $body-background: $body-white;
 $body-background-gradient: $body-gradient;
 $body-font-color: $main-text-black;
@@ -98,7 +99,7 @@ $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 4px;
+$global-radius: 6px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -107,6 +108,7 @@ $global-prototype-breakpoints: false;
 $global-button-cursor: auto;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
+$font-size-smaller: 14px;
 
 @include add-foundation-colors;
 $print-hrefs: true;
@@ -166,9 +168,9 @@ $header-styles: (
     'h6': ('font-size': 16),
   ),
   large: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 38),
-    'h3': ('font-size': 34),
+    'h1': ('font-size': 46),
+    'h2': ('font-size': 34),
+    'h3': ('font-size': 32),
     'h4': ('font-size': 28),
     'h5': ('font-size': 22),
     'h6': ('font-size': 16),

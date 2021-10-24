@@ -6,19 +6,72 @@
  */
 ?>
 
-<div class="top-bar" id="top-bar-menu">
-	<div class="top-bar-left float-left">
-		<ul class="menu">
-			<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
-		</ul>
+	<div class="container" id="top-bar-menu">
+		<div class="site-header__body">
+
+			<div class="title-bar" data-responsive-toggle="main-nav" data-hide-for="large">
+				<button class="menu-icon" type="button" data-toggle="main-nav"></button>
+				<div class="title-bar-title">Menu</div>
+			</div>
+
+			<div class="top-bar" id="main-nav">
+				<div class="top-bar-left">
+					<ul class="dropdown menu" data-dropdown-menu>
+					<li class="menu-text">Site Title</li>						
+					<li>
+						<a href="#">One</a>
+						<ul class="menu vertical">
+						<li><a href="#">One</a></li>
+						<li><a href="#">Two</a></li>
+						<li><a href="#">Three</a></li>
+						</ul>
+					</li>						
+					<li><a href="#">Two</a></li>
+					<li><a href="#">Three</a></li>
+					</ul>
+				</div>
+				<div class="top-bar-right">
+					<ul class="menu">
+					<li><input type="search" placeholder="Search"></li>
+					<li><button type="button" class="button">Search</button></li>
+					</ul>
+				</div>
+			</div>
+
+
+		<div class="site-header__logoholder">
+			<a href="<?php echo esc_url(home_url()); ?>" rel="home" class="site-header__title" title="Promo Group AS">
+				Promo <span class="site-header__title-span">Group</span> AS
+			</a>
+		</div>
+
+		<div class="site-header__nav-holder">
+			<div class="site-header__nav-content">
+				<!-- mobile menu -->
+				
+
+				<!-- menu desktop 
+				<nav class="main-navigation vertical menu nav  dropdown-pane" id="mobile-dropdown" data-dropdown">
+					<?php joints_top_nav(); ?>
+				</nav>
+                <nav class="main-navigation nav desktop-dropdown medium-centered show-for-large">
+                    <?php joints_top_nav(); ?>  
+				</nav>--> 
+
+			</div>
+		</div>
+
+		<div class="site-header__cta">
+			<a href="#form" type="button" class="button site-header__cta-link" data-toggle="modal" data-target="#form....">
+				Registrer din CV
+			</a>
+		</div>
 	</div>
-	<div class="top-bar-right show-for-medium">
-		<?php joints_top_nav(); ?>	
-	</div>
-	<div class="top-bar-right float-right show-for-small-only">
+
+	<!--<div class="top-bar-right float-right show-for-small-only">
 		<ul class="menu">
-			<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
+			 <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> 
 			<li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
 		</ul>
-	</div>
+	</div>-->
 </div>

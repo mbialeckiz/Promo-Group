@@ -22,13 +22,17 @@
     }
   }
   
-  .logged-in .site-header {
-    margin-top: 32px;
-  }
-
-
 
 
 
 
   /**** GLOBAL CUSTOM BTF ****/
+
+.logged-in .site-header {
+    margin-top: 32px;
+}
+
+  .gradient {
+    background: rgb(234,171,43);
+    background: linear-gradient(90deg, rgba(234,171,43,0) 0%, rgba(255,202,95,0.07) 100%);
+}

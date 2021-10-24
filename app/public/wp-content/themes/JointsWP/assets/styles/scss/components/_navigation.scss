@@ -9,12 +9,12 @@
   top: 0;
   width: 100%;
   z-index: 99;
-  background: #979797;
+  background-color: #979797;
   background-color: transparent;
 
   &__title {
     font-size: 25px;
-    line-height: 28px;
+    line-height: 25px;
     font-weight: bold;
     color: $white;
     &-span {
@@ -61,15 +61,21 @@
     margin-bottom: 0;
     margin-left: 0;
     list-style-type: none;
+    @include breakpoint(medium up) {
+      font-size: 38px;
+    }
   }
-  .menu-item-object-page {
+  .menu-item {
     display: inline-block;
     font-weight: 400;
-    padding: 1.125rem;
+    padding: 1.125rem 1rem;
     &:hover {
       > a  {
         color: $primary-yellow;
       }
+    }
+    @include breakpoint(large down) {
+      display: block;
     }
   }
   &__mobile {
@@ -79,5 +85,39 @@
     &--open {
       display: block;
     }
+  }
+}
+
+.skrs-mobile-toggle {
+  font-weight: bold;
+  margin-right: 20px;
+
+  @include breakpoint(medium down) {
+    position: relative;
+  }
+  button {
+    color: $black!important;
+    position: relative;
+    @include breakpoint(medium down) {
+      position: absolute;
+      top: 0;
+      right: -130px;
+      color: $white!important;
+    }
+    span {
+      position: absolute;
+      right: 24px;
+      bottom: 0px;
+      font-family: 'Poppins' sans-serif;
+    }
+  }
+}
+.skrs-mobile-menu-wrapper {
+  position: absolute;
+  top: 50px!important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  .vertical {
+    background-color: $white;
   }
 }

@@ -1,0 +1,126 @@
+/*** Block with two columns ***/
+
+.block2column {
+    position: relative;
+    &__wrapper {
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+    }
+    &__header {
+        max-width: 100%;
+        font-weight: bold;
+        padding-bottom: 2rem;
+        text-align: center;
+        @include breakpoint(large up) {
+            max-width: 50%;
+            margin: 0 auto;
+            display: block;
+            padding-bottom: 4rem;
+        }
+    }
+    &__columns {
+        column-gap: 2rem;
+        row-gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        @include breakpoint(large up) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        border-radius: $global-radius;
+        background-color: $white;
+        box-shadow: 10px 1px 21px 1px rgba(200,200,200,0.5);
+        -webkit-box-shadow: 10px 1px 21px 1px rgba(200,200,200,0.5);
+        -moz-box-shadow: 10px 1px 21px 1px rgba(200,200,200,0.5);
+        position: relative;
+        padding: 10px 10px 10px 0;
+        &:before {
+            position: absolute;
+            content: "";
+            display: block;
+            background-color: rgba(240, 182, 63, 0.4);
+            height: 100%;
+            width: 20px;
+            top: 0;
+            bottom: 0;
+            border-top-left-radius: $global-radius;
+            left: -7px;
+            border-bottom-left-radius: $global-radius;
+        }
+        @include breakpoint(large up) {
+            height: 75%;
+            flex-direction: row;
+        }
+        &--picture {
+            min-width: 220px;
+        }
+        &--text {
+            color: $main-text-black;
+            line-height: 1.4;
+            font-size: $font-size-smaller;
+            padding-left: 20px;
+            padding-right: 20px;
+            @include breakpoint(large up) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+/***  Block VÅRE FAGOMRÅDER ***/
+.block-fagomraader {
+    position: inherit;
+    &__wrapper {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    &__header {
+        display: block;
+        max-width: 100%;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 1rem;
+        margin: 0 auto;
+        @include breakpoint(large up) {
+            text-align: left;
+            margin: unset;
+            text-align: left;
+        }
+    }
+    &__text {
+        color: $main-text-black;
+        padding-bottom: 2rem;
+    }
+    &__specialists {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+        grid-gap: 2rem;
+    }
+    &__single-specialist {
+        min-width: 155px;
+        height: 155px;
+        border-radius: $global-radius;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $white;
+        box-shadow: 10px 1px 21px 1px rgba(200,200,200,0.5);
+        -webkit-box-shadow: 10px 1px 21px 1px rgba(200,200,200,0.5);
+        -moz-box-shadow: 10px 1px 21px 1px rgba(200,200,200,0.5);
+        &> img {
+            max-width: 78px;
+            margin-bottom: 1rem;
+        }
+        &> p {
+            font-weight: bold;
+            font-size: $font-size-smaller;
+        }
+    }
+}
