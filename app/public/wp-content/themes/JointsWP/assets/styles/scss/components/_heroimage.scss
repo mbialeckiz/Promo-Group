@@ -2,12 +2,6 @@
     width: 100%;
     height: auto;
     &__backgroundimage {
-        //color: $white;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: 640px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -31,7 +25,6 @@
             left: -40px;
             top: 0;
             bottom: 0
-
         }
     }
     &__undertitle {
@@ -48,11 +41,9 @@
         @include breakpoint(medium up) {
             font-size: 38px;
         }
-          
         @include breakpoint(mediumlarge up) {
             font-size: 44px;
         }
-          
         @include breakpoint(large up) {
             font-size: 48px;
         }
@@ -60,5 +51,65 @@
     &__cta-button {
         font-weight: bold;
         color: $black!important;
+    }
+}
+
+.heroimage-alt {
+    width: 100%;
+    height: auto;
+    &__background {
+        background: rgb(34,38,51);
+        background: linear-gradient(180deg, rgba(34,38,51,1) 0%, rgba(42,49,73,1) 50%, rgba(39,44,60,1) 100%);
+        min-height: 340px;
+        padding: 5rem 0; 
+        /*display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;*/
+    }
+    &__titlewrapper {
+        max-width: 100%;
+        padding: 40px 40px 40px 0;
+        position: relative;
+        @include breakpoint(large up) {
+            max-width: 50%;
+        }
+    }
+    &__undertitle {
+        color: $primary-yellow;
+        font-size: $font-text-size;
+        text-transform: uppercase;
+        display: block;
+    }
+    &__pagetitle {
+        color: $white;
+        font-size: 34px;
+        z-index: 222;
+        font-weight: 600;
+        margin: 10px 0 20px 0;
+        @include breakpoint(medium up) {
+            font-size: 38px;
+        }
+        @include breakpoint(mediumlarge up) {
+            font-size: 44px;
+        }
+        @include breakpoint(large up) {
+            font-size: 48px;
+        }
+    }
+    &__cta-button {
+        font-weight: bold;
+        color: $black!important;
+    }
+    &__imagewrapper {
+        position: relative;
+        img {
+            position: relative;
+            @include breakpoint(large up) {
+                position: absolute;
+                left: 0;
+                bottom: -10rem;
+            }    
+        }
     }
 }

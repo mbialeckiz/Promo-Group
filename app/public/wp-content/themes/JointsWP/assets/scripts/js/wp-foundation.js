@@ -17,3 +17,15 @@ jQuery(document).ready(function() {
 		}
 	});
 }); 
+
+
+/*
+Hamburger menu
+*/
+
+const hamburger = document.querySelector('.hamburger--js');
+
+hamburger.addEventListener('click', () => {
+  const nav = document.querySelector('.main-navigation--js');
+  nav.classList.toggle('main-navigation__mobile--open');
+});

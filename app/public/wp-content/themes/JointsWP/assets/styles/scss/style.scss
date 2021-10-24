@@ -48,7 +48,7 @@ CSS file.
 @include foundation-label;
 @include foundation-media-object;
 @include foundation-off-canvas;
-//@include foundation-orbit;
+@include foundation-orbit;
 @include foundation-pagination;
 @include foundation-progress-bar;
 @include foundation-slider;
@@ -58,14 +58,19 @@ CSS file.
 @include foundation-table;
 @include foundation-tabs;
 @include foundation-thumbnail;
-//@include foundation-title-bar;
-//@include foundation-tooltip;
+@include foundation-title-bar;
+@include foundation-tooltip;
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
 // Import your custom styles
+@import "abovethefold";
 @import "global";
 @import "components/globalcustom";
 @import "components/navigation";
 @import "components/heroimage";
+@import "components/twocolumnsblock";
+@import "components/fagomraader";
+@import "components/cta";
+@import "components/footer"

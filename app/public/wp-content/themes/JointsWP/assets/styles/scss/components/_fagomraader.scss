@@ -1,0 +1,57 @@
+/***  Block VÅRE FAGOMRÅDER ***/
+.block-fagomraader {
+    position: inherit;
+    &__wrapper {
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+    }
+    &__header {
+        display: block;
+        max-width: 100%;
+        text-align: center;
+        font-weight: $global-weight-bold;
+        padding-bottom: 1rem;
+        margin: 0 auto;
+        @include breakpoint(large up) {
+            text-align: left;
+            margin: unset;
+            text-align: left;
+        }
+    }
+    &__text {
+        color: $main-text-black;
+        padding-bottom: 2rem;
+    }
+    &__specialists {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+        grid-gap: 2rem;
+    }
+    &__single-specialist {
+        min-width: 155px;
+        height: 155px;
+        border-radius: $global-radius;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $white;
+        box-shadow: 10px 1px 21px 1px rgba(200,200,200,0.5);
+        -webkit-box-shadow: 10px 1px 21px 1px rgba(200,200,200,0.5);
+        -moz-box-shadow: 10px 1px 21px 1px rgba(200,200,200,0.5);
+        transition: transform 1s;
+        &> img {
+            max-width: 78px;
+            margin-bottom: 1rem;
+            opacity: 1;
+        }
+        &> p {
+            font-weight: $global-weight-bold;
+            font-size: $font-size-smaller;
+        }
+        &:hover img {
+            transform: scale(1.3);
+            opacity: 0.6;
+        }
+    }
+}
