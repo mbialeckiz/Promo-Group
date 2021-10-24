@@ -4,32 +4,30 @@
 */
 ?>
 
-        <div class="block-hvatilbyr">
+        <div class="block-hvatilbyrpromo">
             <?php
-            $fagomraader_block_header = get_field( 'fagomraader_block_header' );
-            $fagomraader_block_text = get_field( 'fagomraader_block_text' );
+            $hvatilbyrpromo_block_header = get_field( 'hvatilbyrpromo_block_header' );
             ?>
-            <div class="block-fagomraader__wrapper container">
-                <?php if ($fagomraader_block_header): ?>
-                    <h2 class="block-fagomraader__header">
-                        <?php echo $fagomraader_block_header; ?>
+            <div class="block-hvatilbyrpromo__wrapper container">
+                <?php if ($hvatilbyrpromo_block_header): ?>
+                    <h2 class="block-hvatilbyrpromo__header">
+                        <?php echo $hvatilbyrpromo_block_header; ?>
                     </h2>
-                <?php endif; ?>
-                <?php if ($fagomraader_block_text): ?>
-                    <div class="block-fagomraader__text">
-                        <p><?php the_field('fagomraader_block_text'); ?></p>
-                    </div>
                 <?php endif; ?>
 
                 <?php
-                if( have_rows('fagomraader_block_repeater') ):
-                    echo '<div class="block-fagomraader__specialists">';
-                    while ( have_rows('fagomraader_block_repeater') ) : the_row();
-                    $profession_name = get_sub_field('fagomraader_name');
-                    $profession_icon = get_sub_field('fagomraader_icon');
-                    echo '<div class="block-fagomraader__single-specialist ' . $profession_name . '">';
-                    echo '<img src="' . $profession_icon['url'] . '" alt="' . $profession_icon['alt'] . '" />';
-                    echo '<p>' . $profession_name . '</p>';
+                if( have_rows('hvatilbyrpromo_block_repeater') ):
+                    echo '<div class="block-hvatilbyrpromo__usps">';
+                    while ( have_rows('hvatilbyrpromo_block_repeater') ) : the_row();
+                    $usps_name = get_sub_field('hvatilbyrpromo_name');
+                    $usps_icon = get_sub_field('hvatilbyrpromo_icon');
+                    $usps_text = get_sub_field('hvatilbyrpromo_text');
+                    echo '<div class="block-hvatilbyrpromo__single-usp ' . $usps_name . '">';
+                        echo '<img src="' . $usps_icon['url'] . '" alt="' . $usps_icon['alt'] . '" class="block-hvatilbyrpromo__single-usp--icon" />';
+                        echo '<div class="block-hvatilbyrpromo__single-usp--description">';
+                            echo '<h3>' . $usps_name . '</h3>';
+                            echo '<p>' . $usps_text . '</p>';
+                        echo '</div>';
                     echo '</div>';
                     endwhile;
                     echo '</div>';
