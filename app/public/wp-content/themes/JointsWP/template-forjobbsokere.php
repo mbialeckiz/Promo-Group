@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Bedrifter
+Template Name: For Jobbsøkere
 */
 
 get_header(); ?>
@@ -17,24 +17,27 @@ get_header(); ?>
         <section class="gradient">
             <!-- Block Hva tilbyr Promo -->
 
-                <?php get_template_part( 'parts/tilbudpromo' ); ?>
+                <?php get_template_part( 'parts/textblock' ); ?>
 
             <!-- End Block Hva tilbyr Promo -->
     
-        
+            <!-- Block Form Send CV -->
+
+                <?php get_template_part( 'parts/form' ); ?>
+
+            <!-- End Form Send CV  -->
+            
+
+
             <!-- Block VÅRE FAGOMRÅDER -->
 
-                <?php get_template_part( 'parts/fagomraader' ); ?>
+            <?php get_template_part( 'parts/cta' ); ?>
 
             <!-- END Block VÅRE FAGOMRÅDER -->
 
         </section> <!-- END Section Gradient -->
 
-        <!-- Block 50/50 -->
 
-            <?php get_template_part( 'parts/5050' ); ?>
-
-        <!-- END Block 50/50 -->
 
 	
     </main> <!-- end Main -->

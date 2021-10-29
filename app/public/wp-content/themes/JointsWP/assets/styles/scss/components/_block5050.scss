@@ -1,0 +1,91 @@
+/* Block 5050 */
+.block5050 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10rem;
+    &__wrapper {
+        max-width: 100%;
+        position: relative;
+        &--fancy-heading {
+            padding-top: 4rem;
+            padding-bottom: 3rem;
+        }
+        .grid-x {
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__fancy-heading {
+        font-size: 3.5rem;
+        line-height: 4rem;
+        font-weight: bold;
+        color: #C5C5C5;
+        text-align-last: justify;
+        text-transform: uppercase;
+        letter-spacing: -0.2rem;
+        padding-left: 1.25rem;
+        @include breakpoint(medium up) {
+            font-size: 4.5rem;
+            line-height: 4.5rem;
+        }
+        @include breakpoint(large up) {
+            padding-left: 0px;
+        }
+    }
+    @include breakpoint(large up) {
+        .grid-margin-x>.large-4 {
+            width: calc(33.33333%);
+        }
+        .grid-padding-x>.cell {
+            padding-right: 0rem;
+            padding-left: 0rem;
+        }
+        .grid-margin-x>.cell {
+            margin-left: 0rem;
+            margin-right: 0rem;
+        }
+        .grid-margin-x>.large-6 {
+            width: calc(50%);
+        }
+    }
+    &__titlewrapper {
+        position: inherit;
+        padding-bottom: 3rem;
+        @include breakpoint(medium up) {
+            padding-right: 40px;
+        }
+    }
+    &__heading {
+        color: $black;
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 10px 0 20px 0;
+        @include breakpoint(medium up) {
+            font-size: 1.4rem;
+        }
+        @include breakpoint(large up) {
+            font-size: 1.6rem;
+        }
+    }
+    &__description {
+        margin-bottom: 1rem;
+    }
+    &__cta-button {
+        font-weight: bold;
+        color: $black!important;
+    }
+    &__imagewrapper {
+        position: relative;
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            box-shadow: -37px 37px 5px 0px rgba(240, 182, 63, .4);
+            -webkit-box-shadow: -37px 37px 5px 0px rgba(240, 182, 63, .4);
+            -moz-box-shadow: -37px 37px 5px 0px rgba(240, 182, 63, .4);
+        }
+        @include breakpoint(medium up) {
+            padding-left: 40px;
+        }
+    }
+}

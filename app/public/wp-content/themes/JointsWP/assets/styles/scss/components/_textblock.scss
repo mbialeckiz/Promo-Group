@@ -1,0 +1,16 @@
+/* TEXT BLOCK */
+.text-block {
+    position: relative;
+    &__wrapper {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        max-width: 100%;
+        margin-left: unset;
+        @include breakpoint(large up) {
+           max-width: 50%;
+        }
+    }
+    &__content {
+        font: $black;
+    }
+}

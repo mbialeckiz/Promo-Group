@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Bedrifter
+Template Name: Om oss
 */
 
 get_header(); ?>
@@ -17,14 +17,14 @@ get_header(); ?>
         <section class="gradient">
             <!-- Block Hva tilbyr Promo -->
 
-                <?php get_template_part( 'parts/tilbudpromo' ); ?>
+                <?php get_template_part( 'parts/textblock' ); ?>
 
             <!-- End Block Hva tilbyr Promo -->
     
         
             <!-- Block VÅRE FAGOMRÅDER -->
 
-                <?php get_template_part( 'parts/fagomraader' ); ?>
+                <?php get_template_part( 'parts/cta' ); ?>
 
             <!-- END Block VÅRE FAGOMRÅDER -->
 
