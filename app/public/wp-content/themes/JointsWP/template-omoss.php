@@ -15,11 +15,11 @@ get_header(); ?>
 
         
         <section class="gradient">
-            <!-- Block Hva tilbyr Promo -->
+            <!-- Text Block -->
 
                 <?php get_template_part( 'parts/textblock' ); ?>
 
-            <!-- End Block Hva tilbyr Promo -->
+            <!-- End Text Block -->
     
         
             <!-- Block VÅRE FAGOMRÅDER -->

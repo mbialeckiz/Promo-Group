@@ -44,6 +44,33 @@
         </div>
     </div>
 
+    <?php else: ?>
+
+    <div class="heroimage-alt__background">
+        <div class="grid-x grid-margin-x grid-padding-x container">     
+            <div class="heroimage-alt__titlewrapper small-12 medium-12 large-6 cell">
+            
+                <span class="heroimage-alt__undertitle">
+                    <?php echo $heroimage_alt_subheading; ?>
+                </span>
+                
+                <?php if ($heroimage_alt_heading_h1): ?>
+                    <h1 class="heroimage-alt__pagetitle">
+                        <?php echo $heroimage_alt_heading_h1; ?>
+                    </h1>
+                <?php endif; ?>
+
+                <a href="<?php echo $heroimage_alt_cta_button_url; ?>" 
+                class="button heroimage-alt__cta-button">
+                    <?php echo $heroimage_alt_cta_button_text; ?>
+                </a>
+            </div>
+            <div class="heroimage-alt__imagewrapper small-12 medium-12 large-6 cell">
+
+            </div>
+        </div>
+    </div>
+
     <?php endif; ?>
 
 
