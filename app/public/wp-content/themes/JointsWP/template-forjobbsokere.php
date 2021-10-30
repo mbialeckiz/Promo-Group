@@ -17,28 +17,29 @@ get_header(); ?>
         <section class="gradient">
             <!-- Block Hva tilbyr Promo -->
 
-                <?php get_template_part( 'parts/textblock' ); ?>
+            <?php get_template_part( 'parts/textblock' ); ?>
 
             <!-- End Block Hva tilbyr Promo -->
     
             <!-- Block Form Send CV -->
 
-                <?php get_template_part( 'parts/form' ); ?>
+            <?php get_template_part( 'parts/form' ); ?>
 
             <!-- End Form Send CV  -->
             
+            <!-- Block STEPS -->
 
+            <?php get_template_part( 'parts/steps' ); ?>
+
+            <!-- END Block STEPS -->
 
             <!-- Block VÅRE FAGOMRÅDER -->
 
-            <?php get_template_part( 'parts/cta' ); ?>
+            <?php get_template_part( 'parts/fagomraader' ); ?>
 
             <!-- END Block VÅRE FAGOMRÅDER -->
 
         </section> <!-- END Section Gradient -->
-
-
-
 	
     </main> <!-- end Main -->
 

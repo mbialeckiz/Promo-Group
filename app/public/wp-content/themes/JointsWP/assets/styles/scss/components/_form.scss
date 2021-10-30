@@ -8,11 +8,17 @@
         -webkit-box-shadow: 0px 5px 10px 5px rgba(200,200,200,0.5);
         -moz-box-shadow: 0px 5px 10px 5px rgba(200,200,200,0.5);
         position: relative;
-        padding: 3rem;
+        padding: 1rem;
+        @include breakpoint(large up) {
+            padding: 3rem;
+        }
         &--inner {
             display: grid;
-            grid-template-columns: 1fr 1fr;
             grid-column-gap: 2rem;
+            grid-template-columns: 1fr;
+            @include breakpoint(large up) {
+                grid-template-columns: 1fr 1fr;
+            }
         }
     }
     &__header {
@@ -25,6 +31,26 @@
         color: $black;
     }
     .wpcf7-form {
-        
+        .codedropz-upload-inner {
+            h3 {
+                font-size: 1.2rem;
+                @include breakpoint(large up) {
+                    font-size: 1.6rem;
+                }
+            }
+            .cd-upload-btn {
+                font-size: 1.1rem;
+                @include breakpoint(large up) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        .dnd-upload-status .dnd-upload-details .name {
+            color: $black;
+        }
+        .dnd-upload-status .dnd-upload-details .dnd-progress-bar span {
+            background: $primary-yellow;
+            color: $black;
+        }
     }
 }

@@ -1,0 +1,71 @@
+/* STEPS */
+.steps {
+    overflow: hidden;
+    padding: 2.5rem 0;
+    @include breakpoint(large up) {
+        padding: 5rem 0;
+    }
+    &__wrapper {
+        position: inherit;
+        &--inner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            //grid-gap: 4rem;
+        }
+    }
+    &__header {
+        display: block;
+        max-width: 100%;
+        text-align: center;
+        font-weight: $global-weight-bold;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+        @include breakpoint(large up) {
+            text-align: left;
+            margin: unset;
+            text-align: left;
+        }
+    }
+}
+
+.single-step {
+    padding-top: 2rem;
+    overflow: hidden;
+    margin-right: 10px;
+    &__header-wrapper {
+        position: relative;
+        font-weight: 600;
+        padding-bottom: 30px;
+    }
+    &__number {
+        font-size: 100px;
+        font-weight: 800;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        right: 0;
+        text-align: left;
+        opacity: 0.15;  
+    }
+    &__header {
+        font-size: 1.1rem;
+        font-weight: $global-weight-bold;
+        display: inline-block;
+        @include breakpoint(large up) {
+            font-size: 1.5rem;
+        }
+        &::after {
+            content: " ";
+            width: 100%;
+            position: absolute;
+            top: 23%;
+            bottom: 0;
+            height: 3px;
+            background: repeating-linear-gradient(
+                to right, #DBDEE9, #fff 10px, #DBDEE9 10px, #fff 20px);
+        }
+    }
+    &__text {
+        padding-right: 4rem;
+    }
+}
