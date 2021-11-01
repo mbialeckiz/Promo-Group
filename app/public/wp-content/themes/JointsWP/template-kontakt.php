@@ -21,10 +21,13 @@ get_header(); ?>
         <!-- Maps block -->
             <?php get_template_part( 'parts/maps' ); ?>
         <!-- END Maps Block -->
-        
+
+          
         <section class="gradient">
 
-
+            <!-- Contact Form block -->
+                <?php get_template_part( 'parts/form' ); ?>
+            <!-- End Contact Form block -->
 
         </section> <!-- END Section Gradient -->
 	

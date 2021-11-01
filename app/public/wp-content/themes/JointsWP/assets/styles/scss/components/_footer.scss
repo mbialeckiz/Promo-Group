@@ -50,7 +50,10 @@
 
 .upper-footer {
     &__contact {
-        text-align: right;
+        text-align: center;
+        @include breakpoint(large up) {
+            text-align: right;
+        }
         > p {
             display: inline-block;
             margin-bottom: 0;
@@ -84,7 +87,7 @@
 }
 
 #footer-links {
-    position: inherit;
+    justify-content: space-around;
     .menu-item {
         a {
             color: $black;
@@ -94,6 +97,13 @@
     #menu-item-76 {
         > a {
             padding-left: 0;
+        }
+    }
+    > .current-menu-item {
+        a {
+            background: none;
+            font-weight: $global-weight-bold;
+            text-decoration: underline;
         }
     }
 }

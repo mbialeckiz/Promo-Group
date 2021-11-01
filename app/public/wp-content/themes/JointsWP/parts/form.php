@@ -4,22 +4,22 @@
 */
 ?>
 
-<section class="send-cv">
+<section class="form">
 <?php
-    $send_cv_header = get_field('send_cv_header');
-    $send_cv_text_field = get_field('send_cv_text_field');?>
+    $form_header = get_field('form_header');
+    $form_text_field = get_field('form_text_field');?>
 
     <div class="container">     
-        <div class="form-wrapper send-cv__wrapper">
-            <?php if ($send_cv_header): ?>
-                <h2 class="form-heading send-cv__header">
-                    <?php echo $send_cv_header; ?>
+        <div class="form__wrapper">
+            <?php if ($form_header): ?>
+                <h2 class="form__header">
+                    <?php echo $form_header; ?>
                 </h2>
             <?php endif; ?>
              
-            <?php if ($send_cv_text_field): ?>
-                <div class="form-wrapper send-cv__form--wrapper ">
-                    <?php echo $send_cv_text_field; ?>
+            <?php if ($form_text_field): ?>
+                <div class="form__form--wrapper ">
+                    <?php echo $form_text_field; ?>
                 </div>
             <?php endif; ?>            
 

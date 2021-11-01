@@ -36,6 +36,10 @@ get_header(); ?>
 
         <!-- END Block 50/50 -->
 
+        <!-- Section Testimonials --> 
+        <?php get_template_part( 'parts/testimonials' ); ?>
+        <!-- END Section Testimonials -->
+
 	
     </main> <!-- end Main -->
 

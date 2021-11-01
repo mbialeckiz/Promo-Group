@@ -1,6 +1,6 @@
-.send-cv {
+.form {
+    position: inherit;
     &__wrapper {
-        position: inherit;
         background-color: $white;
         height: auto;
         border-radius: $global-radius;
@@ -52,5 +52,15 @@
             background: $primary-yellow;
             color: $black;
         }
+    }
+}
+
+.page-template-template-kontakt {
+    .gradient {
+        margin-top: 500px;
+        padding: 4rem 0;
+    }
+    .form__header {
+        font-size: 1.5rem;
     }
 }

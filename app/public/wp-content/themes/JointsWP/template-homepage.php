@@ -113,7 +113,11 @@ get_header(); ?>
 
         </section> <!-- END Section Call-to-Action -->
 
-	
+        
+        <!-- Section Testimonials --> 
+            <?php get_template_part( 'parts/testimonials' ); ?>
+        <!-- END Section Testimonials -->
+
     </main> <!-- end Main -->
 
 <?php get_footer(); ?>
