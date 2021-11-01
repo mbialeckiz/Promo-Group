@@ -28,7 +28,7 @@
 					<nav class="main-navigation vertical menu nav dropdown-pane" id="mobile-dropdown" data-dropdown-menu>
 						<?php joints_top_nav(); ?>
 						<div class="site-header__cta--mobile">
-							<a href="#form" type="button" class="button site-header__cta-link" data-toggle="modal" data-target="#form....">
+							<a href="/for-jobbsokere/" type="button" class="button site-header__cta-link" data-toggle="modal" data-target="for-jobbsokere">
 								Registrer din CV
 							</a>
 						</div>

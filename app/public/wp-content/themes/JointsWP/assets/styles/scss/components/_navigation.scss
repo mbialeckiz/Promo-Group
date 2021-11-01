@@ -4,15 +4,13 @@
 .site-header {
   color: $white;
   height: 80px;
-  position: fixed;
+  //position: fixed;
   left: 0;
   right: 0;
   top: 0;
   width: 100%;
   z-index: 99;
-  background-color: rgba(0,0,0,.6);
-  //background-color: transparent;
-
+  background: #222633;
   &__title {
     font-size: 25px;
     line-height: 25px;
@@ -36,9 +34,6 @@
   }
   &__cta {
     font-weight: $global-weight-bold;
-    &--mobile {
-      
-    }
   }
   .top-bar, .top-bar ul {
     background-color: transparent;
@@ -47,6 +42,9 @@
 
 .main-navigation {
   position: relative;
+  &__wrapper {
+
+  }
   a {
     color: $white;
     font-size: 16px;
@@ -59,16 +57,13 @@
       color: $primary-yellow;
     }
   }
-  &__itemswrapper {
+  &__wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 0;
     margin-left: 0;
     list-style-type: none;
-    @include breakpoint(medium up) {
-      font-size: 38px;
-    }
   }
   .menu-item {
     display: inline-block;
