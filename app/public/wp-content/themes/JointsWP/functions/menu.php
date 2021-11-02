@@ -13,8 +13,8 @@ function joints_top_nav() {
 	wp_nav_menu(array(
 		'container'			=> false,						// Remove nav container
 		'menu_id'			=> 'main-nav',					// Adding custom nav id
-		'menu_class'		=> 'nav__menu nav__menu--desktop main-navigation__wrapper',	// Adding custom nav class
-		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
+		'menu_class'		=> 'main-navigation__wrapper dropdown vertical large-horizontal menu',	// Adding custom nav class
+		'items_wrap'		=> '<ul id="%1$s" class="%2$s" data-responsive-menu="dropdown">%3$s</ul>',
 		'theme_location'	=> 'main-nav',					// Where it's located in the theme
 		'depth'				=> 5,							// Limit the depth of the nav
 		'fallback_cb'		=> false,						// Fallback function (see below)
