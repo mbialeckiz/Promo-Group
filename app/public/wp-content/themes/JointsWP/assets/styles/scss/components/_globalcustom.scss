@@ -1,4 +1,15 @@
 /**** GLOBAL CUSTOM ATF ****/
+.page-template-template-homepage {
+    .main {
+        margin-top: -80px;
+    }
+    .menu.vertical {
+        @include breakpoint(large up) {
+            background: transparent;  
+        }
+    }
+}
+
 .container {
     width: 100%;
     padding-right: 15px;
@@ -34,7 +45,7 @@
   /**** GLOBAL CUSTOM BTF ****/
 
 .logged-in .site-header {
-    margin-top: 32px;
+    //margin-top: 32px;
 }
 
   .gradient {
