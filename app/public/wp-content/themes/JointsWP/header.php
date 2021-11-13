@@ -14,8 +14,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js"
-    data-culture="NB" type="text/javascript"></script>
+		<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="2decbc1f-7820-4268-b952-be9bc7d4bf96" type="text/javascript" async></script>
 
 		<!-- Google Tag Manager -->
 		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

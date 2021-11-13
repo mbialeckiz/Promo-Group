@@ -24,6 +24,9 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
         grid-gap: 2rem;
+        @include breakpoint(large up) {
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        }
     }
     &__single-usp {
         min-width: 255px;

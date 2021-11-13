@@ -23,7 +23,7 @@
 	    						<p>Kontakt oss:</p>
 								<a href="tel:41269359">41 26 93 59</a>
 								<span>&#183;</span>
-								<a href="mailto:kontakt@promogroup.no">kontakt@promogroup.no</a>
+								<a href="mailto:barbara@promogroup.no">barbara@promogroup.no</a>
 							</div>
 	    				</div>
 
@@ -40,7 +40,7 @@
 							</a>
 						</div>
 						<div class="small-12 medium-12 large-4 cell lower-footer__linkholder">
-							<a href="/kontakt-oss" rel="home" class="footer__link" title="Personvernerklæring">
+							<a href="/personvern/" rel="home" class="footer__link" title="Personvernerklæring">
 								Personvernerklæring
 							</a>
 						</div>
